@@ -59,7 +59,7 @@ tourney_response=requests.get(TOURNAMENT_API_ENDPOINT, headers=headers)
 
 if tourney_response.status_code != 200:
     # Handle the error if the request failed
-    print(f"Failed to download image. Status code: {tourney_response.status_code}")
+    print(f"Failed to download logos for tournament id {tournament_id}. Status code: {tourney_response.status_code}")
     exit(1)
 
 tourney_data = tourney_response.json()
